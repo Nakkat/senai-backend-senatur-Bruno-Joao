@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Senai.Senatur.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:Senai.Senatur.WebApi.Controllers.LoginController">
+            <summary>
+            Controller responsável pelo Login
+            </summary>
+        </member>
+        <member name="P:Senai.Senatur.WebApi.Controllers.LoginController._usuarioRepository">
+            <summary>
+            Cria um objeto _usuarioRepository que irá receber todos os métodos definidos na interface
+            </summary>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.LoginController.#ctor">
+            <summary>
+            Instancia este objeto para que haja a referência aos métodos no repositório
+            </summary>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.LoginController.Post(Senai.Senatur.WebApi.ViewModel.LoginViewModel)">
+            <summary>
+            Valida o usuário
+            </summary>
+            <param name="login">Objeto login que contém o e-mail e a senha do usuário</param>
+            <returns>Retorna um token com as informações do usuário</returns>
+        </member>
+        <member name="F:Senai.Senatur.WebApi.Controllers.PacotesController._pacoteRepository">
+            <summary>
+            Cria um objeto _estudioRepository que irá receber todos os métodos definidos na interface
+            </summary>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.PacotesController.#ctor">
+            <summary>
+            Instancia este objeto para que haja a referência aos métodos no repositório
+            </summary>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.PacotesController.Get">
+            <summary>
+            Lista todos os estúdios
+            </summary>
+            <returns>Uma lista de estúdios e um status code 200 - Ok</returns>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.PacotesController.GetById(System.Int32)">
+            <summary>
+            Busca um estúdio através do ID
+            </summary>
+            <param name="id">ID do estúdio que será buscado</param>
+            <returns>Um estúdio buscado e um status code 200 - Ok</returns>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.PacotesController.Post(Senai.Senatur.WebApi.Pacote)">
+            <summary>
+            Cadastra um novo estúdio
+            </summary>
+            <param name="novoPacote">Objeto novoEstudio que será cadastrado</param>
+            <returns>Um status code 201 - Created</returns>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.PacotesController.Put(System.Int32,Senai.Senatur.WebApi.Pacote)">
+            <summary>
+            Altera um estúdio
+            </summary>
+            <param name="id">Id do estúdio que será buscado</param>
+            <param name="pacoteAtualizado">Objeto estudioAtualizado que será alterado</param>
+            <returns>Um Status Code 204 (No Content)</returns>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.PacotesController.Delete(System.Int32)">
+            <summary>
+            Deleta um estúdio
+            </summary>
+            <param name="id">Id do estúdio que será deletado</param>
+            <returns>Um status code 200</returns>
+        </member>
+        <member name="F:Senai.Senatur.WebApi.Controllers.TiposUsuarioController._tipoUsuarioRepository">
+            <summary>
+            Cria um objeto _tipoUsuarioRepository que irá receber todos os métodos definidos na interface
+            </summary>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.TiposUsuarioController.#ctor">
+            <summary>
+            Instancia este objeto para que haja a referência aos métodos no repositório
+            </summary>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.TiposUsuarioController.Get">
+            <summary>
+            Lista todos os estúdios
+            </summary>
+            <returns>Uma lista de estúdios e um status code 200 - Ok</returns>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.TiposUsuarioController.GetById(System.Int32)">
+            <summary>
+            Busca um estúdio através do ID
+            </summary>
+            <param name="id">ID do estúdio que será buscado</param>
+            <returns>Um estúdio buscado e um status code 200 - Ok</returns>
+        </member>
+        <member name="F:Senai.Senatur.WebApi.Controllers.UsuariosController._usuarioRepository">
+            <summary>
+            Cria um objeto _estudioRepository que irá receber todos os métodos definidos na interface
+            </summary>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.UsuariosController.#ctor">
+            <summary>
+            Instancia este objeto para que haja a referência aos métodos no repositório
+            </summary>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.UsuariosController.Get">
+            <summary>
+            Lista todos os estúdios
+            </summary>
+            <returns>Uma lista de estúdios e um status code 200 - Ok</returns>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.UsuariosController.GetById(System.Int32)">
+            <summary>
+            Busca um estúdio através do ID
+            </summary>
+            <param name="id">ID do estúdio que será buscado</param>
+            <returns>Um estúdio buscado e um status code 200 - Ok</returns>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.UsuariosController.Post(Senai.Senatur.WebApi.Usuario)">
+            <summary>
+            Cadastra um novo estúdio
+            </summary>
+            <param name="novoUsuario">Objeto novoEstudio que será cadastrado</param>
+            <returns>Um status code 201 - Created</returns>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.UsuariosController.Put(System.Int32,Senai.Senatur.WebApi.Usuario)">
+            <summary>
+            Altera um estúdio
+            </summary>
+            <param name="id">Id do estúdio que será buscado</param>
+            <param name="UsuarioAtualizado">Objeto estudioAtualizado que será alterado</param>
+            <returns>Um Status Code 204 (No Content)</returns>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.UsuariosController.Delete(System.Int32)">
+            <summary>
+            Deleta um estúdio
+            </summary>
+            <param name="id">Id do estúdio que será deletado</param>
+            <returns>Um status code 200</returns>
+        </member>
+    </members>
+</doc>
