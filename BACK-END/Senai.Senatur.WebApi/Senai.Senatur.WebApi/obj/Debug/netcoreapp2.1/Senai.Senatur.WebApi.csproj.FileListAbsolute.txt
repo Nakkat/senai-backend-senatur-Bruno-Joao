@@ -1,0 +1,11 @@
+C:\Users\37258681825\Desktop\senai-backend-senatur-Bruno-Joao\BACK-END\Senai.Senatur.WebApi\Senai.Senatur.WebApi\bin\Debug\netcoreapp2.1\Senai.Senatur.WebApi.deps.json
+C:\Users\37258681825\Desktop\senai-backend-senatur-Bruno-Joao\BACK-END\Senai.Senatur.WebApi\Senai.Senatur.WebApi\bin\Debug\netcoreapp2.1\Senai.Senatur.WebApi.runtimeconfig.json
+C:\Users\37258681825\Desktop\senai-backend-senatur-Bruno-Joao\BACK-END\Senai.Senatur.WebApi\Senai.Senatur.WebApi\bin\Debug\netcoreapp2.1\Senai.Senatur.WebApi.runtimeconfig.dev.json
+C:\Users\37258681825\Desktop\senai-backend-senatur-Bruno-Joao\BACK-END\Senai.Senatur.WebApi\Senai.Senatur.WebApi\bin\Debug\netcoreapp2.1\Senai.Senatur.WebApi.dll
+C:\Users\37258681825\Desktop\senai-backend-senatur-Bruno-Joao\BACK-END\Senai.Senatur.WebApi\Senai.Senatur.WebApi\obj\Debug\netcoreapp2.1\Senai.Senatur.WebApi.csprojAssemblyReference.cache
+C:\Users\37258681825\Desktop\senai-backend-senatur-Bruno-Joao\BACK-END\Senai.Senatur.WebApi\Senai.Senatur.WebApi\obj\Debug\netcoreapp2.1\Senai.Senatur.WebApi.csproj.CoreCompileInputs.cache
+C:\Users\37258681825\Desktop\senai-backend-senatur-Bruno-Joao\BACK-END\Senai.Senatur.WebApi\Senai.Senatur.WebApi\obj\Debug\netcoreapp2.1\Senai.Senatur.WebApi.RazorAssemblyInfo.cache
+C:\Users\37258681825\Desktop\senai-backend-senatur-Bruno-Joao\BACK-END\Senai.Senatur.WebApi\Senai.Senatur.WebApi\obj\Debug\netcoreapp2.1\Senai.Senatur.WebApi.RazorAssemblyInfo.cs
+C:\Users\37258681825\Desktop\senai-backend-senatur-Bruno-Joao\BACK-END\Senai.Senatur.WebApi\Senai.Senatur.WebApi\obj\Debug\netcoreapp2.1\Senai.Senatur.WebApi.AssemblyInfoInputs.cache
+C:\Users\37258681825\Desktop\senai-backend-senatur-Bruno-Joao\BACK-END\Senai.Senatur.WebApi\Senai.Senatur.WebApi\obj\Debug\netcoreapp2.1\Senai.Senatur.WebApi.AssemblyInfo.cs
+C:\Users\37258681825\Desktop\senai-backend-senatur-Bruno-Joao\BACK-END\Senai.Senatur.WebApi\Senai.Senatur.WebApi\obj\Debug\netcoreapp2.1\Senai.Senatur.WebApi.RazorTargetAssemblyInfo.cache
