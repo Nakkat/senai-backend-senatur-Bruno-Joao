@@ -33,6 +33,8 @@ namespace Senai.Senatur.WebApi.Controllers
         /// Lista todos os estúdios
         /// </summary>
         /// <returns>Uma lista de estúdios e um status code 200 - Ok</returns>
+
+        [Authorize(Roles = "ADMINISTRADOR")]
         [HttpGet]
         public IActionResult Get()
         {
@@ -45,6 +47,8 @@ namespace Senai.Senatur.WebApi.Controllers
         /// </summary>
         /// <param name="id">ID do estúdio que será buscado</param>
         /// <returns>Um estúdio buscado e um status code 200 - Ok</returns>
+
+        [Authorize(Roles = "ADMINISTRADOR")]
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {

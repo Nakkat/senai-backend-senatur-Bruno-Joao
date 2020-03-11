@@ -21,10 +21,13 @@ CREATE TABLE Pacote
 	(
 		IdPacote			INT PRIMARY KEY IDENTITY,
 		NomePacote			VARCHAR(255) NOT NULL,
-		Descricao			VARCHAR(255) NOT NULL,
-		DataIda				DATETIME2,
-		DataVolta			DATETIME2,
+		Descricao			TEXT NOT NULL,
+		DataIda				DATE,
+		DataVolta			DATE,
 		Valor				DECIMAL NOT NULL,
 		Ativo				BIT NOT NULL,
-		NomeCidade			VARCHAR(255) NOT NULL UNIQUE
+		NomeCidade			VARCHAR(255) NOT NULL 
 	);
+GO
+
+

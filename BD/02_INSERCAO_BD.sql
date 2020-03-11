@@ -35,7 +35,9 @@ INSERT INTO Pacote VALUES (
 	'BONITO VIA CAMPO GRANDE - 1 PASSEIO - 5 DIAS / 4 DIÁRIAS', 'Localizado no estado de Mato Grosso do Sul e ao sul do Pantanal, Bonito possui 
 	centenas de cachoeiras, rios e lagos de águas cristalinas, além de cavernas inundadas, paredões rochosos e uma infinidade de peixes. 
 	Os aventureiros costumam render-se facilmente a esse destino regado por trilhas ecológicas, passeios de bote e descidas de rapel pelas 
-	inúmeras quedas d"água da região', '2020/03/28', '2020/04/01', '1004.00', '1', 'Bonito'
+	inúmeras quedas d''água da região', '2020/03/28', '2020/04/01', '1004.00', '1', 'Bonito'
 )
 GO
+
+truncate table pacote
 

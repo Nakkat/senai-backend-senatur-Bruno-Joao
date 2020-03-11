@@ -33,6 +33,8 @@ namespace Senai.Senatur.WebApi.Controllers
         /// Lista todos os estúdios
         /// </summary>
         /// <returns>Uma lista de estúdios e um status code 200 - Ok</returns>
+
+        [Authorize(Roles = "ADMINISTRADOR")]
         [HttpGet]
         public IActionResult Get()
         {
@@ -45,6 +47,8 @@ namespace Senai.Senatur.WebApi.Controllers
         /// </summary>
         /// <param name="id">ID do estúdio que será buscado</param>
         /// <returns>Um estúdio buscado e um status code 200 - Ok</returns>
+
+        [Authorize(Roles = "ADMINISTRADOR")]
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
@@ -58,7 +62,7 @@ namespace Senai.Senatur.WebApi.Controllers
         /// <param name="novoUsuario">Objeto novoEstudio que será cadastrado</param>
         /// <returns>Um status code 201 - Created</returns>
 
-        [Authorize(Roles = Administrador)]
+        [Authorize(Roles = "ADMINISTRADOR")]
         [HttpPost]
         public IActionResult Post(Usuario novoUsuario)
         {
@@ -86,7 +90,7 @@ namespace Senai.Senatur.WebApi.Controllers
         /// <param name="UsuarioAtualizado">Objeto estudioAtualizado que será alterado</param>
         /// <returns>Um Status Code 204 (No Content)</returns>
         
-        [Authorize(Roles = Administrador)]
+        [Authorize(Roles = "ADMINISTRADOR")]
         [HttpPut("{id}")]
         public IActionResult Put(int id, Usuario UsuarioAtualizado)
         {
@@ -127,7 +131,7 @@ namespace Senai.Senatur.WebApi.Controllers
         /// <param name="id">Id do estúdio que será deletado</param>
         /// <returns>Um status code 200</returns>
         
-        [Authorize(Roles = Administrador)]
+        [Authorize(Roles = "ADMINISTRADOR")]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {

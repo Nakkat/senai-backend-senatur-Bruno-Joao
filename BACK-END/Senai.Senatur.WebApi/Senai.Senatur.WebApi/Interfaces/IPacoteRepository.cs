@@ -16,5 +16,13 @@ namespace Senai.Senatur.WebApi.Interfaces
         void DeletarPacote(int id);
 
         Pacote BuscarPacotesPorId(int id);
+
+        List<Pacote> ListarPacotesAtivos();
+
+        List<Pacote> ListarPacotesInativos();
+
+        List<Pacote> ListarPacotesCidades(string cidadeBuscada);
+
+        List<Pacote> ListarPacotesPorPreco(string ordem);
     }
 }

@@ -13,6 +13,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Newtonsoft.Json;
 
 namespace Senai.Senatur.WebApi
 {
@@ -28,7 +29,18 @@ namespace Senai.Senatur.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc()
+
+                // Adiciona as opções do json 
+                .AddJsonOptions(options => {
+                    // Ignora valores nulos ao fazer junções nas consultas
+                    options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
+                    // Ignora os loopings nas consultas
+                    options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+                })
+
+
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services
                 // Define a forma de autenticação
@@ -95,6 +107,8 @@ namespace Senai.Senatur.WebApi
             app.UseAuthentication();
 
             app.UseMvc();
+
+            
         }
     }
 }

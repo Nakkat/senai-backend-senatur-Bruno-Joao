@@ -12776,23 +12776,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\37258681825\\.nuget\\packages\\": {},
+    "C:\\Users\\51564241807\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\37258681825\\Desktop\\senai-backend-senatur-Bruno-Joao\\BACK-END\\Senai.Senatur.WebApi\\Senai.Senatur.WebApi\\Senai.Senatur.WebApi.csproj",
+      "projectUniqueName": "C:\\Users\\51564241807\\Desktop\\senai-backend-senatur-Bruno-Joao\\BACK-END\\Senai.Senatur.WebApi\\Senai.Senatur.WebApi\\Senai.Senatur.WebApi.csproj",
       "projectName": "Senai.Senatur.WebApi",
-      "projectPath": "C:\\Users\\37258681825\\Desktop\\senai-backend-senatur-Bruno-Joao\\BACK-END\\Senai.Senatur.WebApi\\Senai.Senatur.WebApi\\Senai.Senatur.WebApi.csproj",
-      "packagesPath": "C:\\Users\\37258681825\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\37258681825\\Desktop\\senai-backend-senatur-Bruno-Joao\\BACK-END\\Senai.Senatur.WebApi\\Senai.Senatur.WebApi\\obj\\",
+      "projectPath": "C:\\Users\\51564241807\\Desktop\\senai-backend-senatur-Bruno-Joao\\BACK-END\\Senai.Senatur.WebApi\\Senai.Senatur.WebApi\\Senai.Senatur.WebApi.csproj",
+      "packagesPath": "C:\\Users\\51564241807\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\51564241807\\Desktop\\senai-backend-senatur-Bruno-Joao\\BACK-END\\Senai.Senatur.WebApi\\Senai.Senatur.WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\37258681825\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\51564241807\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

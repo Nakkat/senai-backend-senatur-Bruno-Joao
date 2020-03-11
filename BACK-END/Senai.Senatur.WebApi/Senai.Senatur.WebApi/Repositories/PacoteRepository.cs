@@ -14,40 +14,39 @@ namespace Senai.Senatur.WebApi.Repositories
         {
             Pacote pacoteBuscado = ctx.Pacote.Find(id);
 
-            if(String.IsNullOrEmpty(pacoteAtualizado.NomePacote)== false)
+            if (pacoteAtualizado.NomePacote != null)
             {
                 pacoteBuscado.NomePacote = pacoteAtualizado.NomePacote;
             }
 
-            if(String.IsNullOrEmpty(pacoteAtualizado.Descricao)== false)
+            if (pacoteAtualizado.Descricao != null)
             {
                 pacoteBuscado.Descricao = pacoteAtualizado.Descricao;
             }
 
-            if(pacoteAtualizado.DataIda !=null)
+            if (pacoteAtualizado.DataIda != null)
             {
                 pacoteBuscado.DataIda = pacoteAtualizado.DataIda;
             }
 
-            if(pacoteAtualizado.DataVolta !=null)
+            if (pacoteAtualizado.DataVolta != null)
             {
                 pacoteBuscado.DataVolta = pacoteAtualizado.DataVolta;
             }
 
-            if(pacoteAtualizado.Valor == pacoteAtualizado.Valor)
+            if (pacoteAtualizado.Valor > 0)
             {
                 pacoteBuscado.Valor = pacoteAtualizado.Valor;
             }
 
-            if(pacoteAtualizado.Ativo == pacoteAtualizado.Ativo)
-            {
                 pacoteBuscado.Ativo = pacoteAtualizado.Ativo;
-            }
 
-            if(String.IsNullOrEmpty(pacoteAtualizado.NomeCidade))
+            if (pacoteAtualizado.NomeCidade != null)
             {
                 pacoteBuscado.NomeCidade = pacoteAtualizado.NomeCidade;
             }
+
+            ctx.SaveChanges();
         }
 
         public Pacote BuscarPacotesPorId(int id)
@@ -74,6 +73,35 @@ namespace Senai.Senatur.WebApi.Repositories
         public List<Pacote> ListarPacotes()
         {
             return ctx.Pacote.ToList();
+        }
+
+        public List<Pacote> ListarPacotesAtivos()
+        {
+            return ctx.Pacote.Where(p => p.Ativo == true).ToList();
+        }
+
+        public List<Pacote> ListarPacotesCidades(string cidadeBuscada)
+        {
+            return ctx.Pacote.Where(p => p.NomeCidade == cidadeBuscada).ToList();
+        }
+
+        public List<Pacote> ListarPacotesInativos()
+        {
+            return ctx.Pacote.Where(p => p.Ativo == false).ToList();
+        }
+
+        public List<Pacote> ListarPacotesPorPreco(string ordem)
+        {
+            if (ordem == "Crescente")
+            {
+               return ctx.Pacote.OrderBy(p => p.Valor).ToList();
+            }
+
+            else if (ordem == "Decrescente")
+            {
+                return ctx.Pacote.OrderByDescending(p => p.Valor).ToList();
+            }
+            return null;
         }
     }
 }

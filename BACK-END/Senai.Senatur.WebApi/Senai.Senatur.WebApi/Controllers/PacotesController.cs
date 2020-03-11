@@ -19,11 +19,13 @@ namespace Senai.Senatur.WebApi.Controllers
         /// <summary>
         /// Cria um objeto _estudioRepository que irá receber todos os métodos definidos na interface
         /// </summary>
+        
         private IPacoteRepository _pacoteRepository;
 
         /// <summary>
         /// Instancia este objeto para que haja a referência aos métodos no repositório
         /// </summary>
+        
         public PacotesController()
         {
             _pacoteRepository = new PacoteRepository();
@@ -33,6 +35,7 @@ namespace Senai.Senatur.WebApi.Controllers
         /// Lista todos os estúdios
         /// </summary>
         /// <returns>Uma lista de estúdios e um status code 200 - Ok</returns>
+       
         [HttpGet]
         public IActionResult Get()
         {
@@ -45,6 +48,8 @@ namespace Senai.Senatur.WebApi.Controllers
         /// </summary>
         /// <param name="id">ID do estúdio que será buscado</param>
         /// <returns>Um estúdio buscado e um status code 200 - Ok</returns>
+
+        [Authorize(Roles = "ADMINISTRADOR")]
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
@@ -57,7 +62,8 @@ namespace Senai.Senatur.WebApi.Controllers
         /// </summary>
         /// <param name="novoPacote">Objeto novoEstudio que será cadastrado</param>
         /// <returns>Um status code 201 - Created</returns>
-        [Authorize(Roles = Administrador)]
+
+        [Authorize(Roles = "ADMINISTRADOR")]
         [HttpPost]
         public IActionResult Post(Pacote novoPacote)
         {
@@ -84,8 +90,8 @@ namespace Senai.Senatur.WebApi.Controllers
         /// <param name="id">Id do estúdio que será buscado</param>
         /// <param name="pacoteAtualizado">Objeto estudioAtualizado que será alterado</param>
         /// <returns>Um Status Code 204 (No Content)</returns>
-         
-        [Authorize(Roles = Administrador)]
+
+        [Authorize(Roles = "ADMINISTRADOR")]
         [HttpPut("{id}")]
         public IActionResult Put(int id, Pacote pacoteAtualizado)
         {
@@ -126,7 +132,7 @@ namespace Senai.Senatur.WebApi.Controllers
         /// <param name="id">Id do estúdio que será deletado</param>
         /// <returns>Um status code 200</returns>
 
-        [Authorize(Roles = Administrador)]
+        [Authorize(Roles = "ADMINISTRADOR")]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
@@ -140,6 +146,36 @@ namespace Senai.Senatur.WebApi.Controllers
             {
                 return BadRequest(ex.Message);
             }
+        }
+
+        // Desafios extras
+
+        [HttpGet("Ativos")]
+        public IActionResult GetByAtivo()
+        {
+            List<Pacote> listaPacotes = _pacoteRepository.ListarPacotesAtivos();
+            return StatusCode(200, new { mensagem = "Lista de pacotes ativos", listaPacotes });
+        }
+
+        [HttpGet("Inativos")]
+        public IActionResult GetByInativo()
+        {
+            List<Pacote> listaPacotes = _pacoteRepository.ListarPacotesInativos();
+            return StatusCode(200, new { mensagem = "Lista de pacotes inativos", listaPacotes });
+        }
+
+        [HttpGet("{cidadeBuscada}")]
+        public IActionResult GetByCidade(string cidadeBuscada)
+        {
+            List<Pacote> listaPacotes = _pacoteRepository.ListarPacotesCidades(cidadeBuscada);
+            return StatusCode(200, new { mensagem = "Lista de pacotes de uma cidade específica", listaPacotes });
+        }
+
+        [HttpGet("Preco/{ordem}")]
+        public IActionResult GetByPreco(string ordem)
+        {
+            List<Pacote> listaPacotes = _pacoteRepository.ListarPacotesPorPreco(ordem);
+            return StatusCode(200, new { mensagem = "Lista de pacotes orderdenados por preço", listaPacotes });
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Senai.Senatur.WebApi.Interfaces;
+﻿using Microsoft.EntityFrameworkCore;
+using Senai.Senatur.WebApi.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,7 +28,9 @@ namespace Senai.Senatur.WebApi.Repositories
 
         public Usuario BuscarPorEmailSenha(string Email, string Senha)
         {
-            return ctx.Usuario.FirstOrDefault(a => a.Email == Email && a.Senha == Senha);
+            Usuario usuarioBuscado = ctx.Usuario.Include(u => u.IdTipoUsuarioNavigation).FirstOrDefault(a => a.Email == Email && a.Senha == Senha);
+
+            return usuarioBuscado;
         }
 
         public Usuario BuscarUsuariosPorId(int id)
@@ -49,7 +52,7 @@ namespace Senai.Senatur.WebApi.Repositories
 
         public List<Usuario> ListarUsuarios()
         {
-            return ctx.Usuario.ToList();
+            return ctx.Usuario.Include(u => u.IdTipoUsuarioNavigation).ToList();
         }
     }
 }
