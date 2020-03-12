@@ -17,7 +17,7 @@ namespace Senai.Senatur.WebApi.Controllers
     public class UsuariosController : ControllerBase
     {
         /// <summary>
-        /// Cria um objeto _estudioRepository que irá receber todos os métodos definidos na interface
+        /// Cria um objeto _usuarioRepository que irá receber todos os métodos definidos na interface
         /// </summary>
         private IUsuarioRepository _usuarioRepository;
 
@@ -30,10 +30,9 @@ namespace Senai.Senatur.WebApi.Controllers
         }
 
         /// <summary>
-        /// Lista todos os estúdios
+        /// Lista todos os usuários
         /// </summary>
-        /// <returns>Uma lista de estúdios e um status code 200 - Ok</returns>
-
+        /// <returns>Uma lista de usuários e um status code 200 - Ok</returns>
         [Authorize(Roles = "ADMINISTRADOR")]
         [HttpGet]
         public IActionResult Get()
@@ -43,11 +42,10 @@ namespace Senai.Senatur.WebApi.Controllers
         }
 
         /// <summary>
-        /// Busca um estúdio através do ID
+        /// Busca um usuário através do ID
         /// </summary>
-        /// <param name="id">ID do estúdio que será buscado</param>
-        /// <returns>Um estúdio buscado e um status code 200 - Ok</returns>
-
+        /// <param name="id">ID do usuário que será buscado</param>
+        /// <returns>Um usuário buscado e um status code 200 - Ok</returns>
         [Authorize(Roles = "ADMINISTRADOR")]
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
@@ -57,11 +55,10 @@ namespace Senai.Senatur.WebApi.Controllers
         }
 
         /// <summary>
-        /// Cadastra um novo estúdio
+        /// Cadastra um novo usuário
         /// </summary>
-        /// <param name="novoUsuario">Objeto novoEstudio que será cadastrado</param>
+        /// <param name="novoUsuario">Objeto novoUsuario que será cadastrado</param>
         /// <returns>Um status code 201 - Created</returns>
-
         [Authorize(Roles = "ADMINISTRADOR")]
         [HttpPost]
         public IActionResult Post(Usuario novoUsuario)
@@ -84,20 +81,19 @@ namespace Senai.Senatur.WebApi.Controllers
         }
 
         /// <summary>
-        /// Altera um estúdio
+        /// Altera um usuário
         /// </summary>
-        /// <param name="id">Id do estúdio que será buscado</param>
-        /// <param name="UsuarioAtualizado">Objeto estudioAtualizado que será alterado</param>
+        /// <param name="id">Id do usuário que será buscado</param>
+        /// <param name="UsuarioAtualizado">Objeto usuarioAtualizado que será alterado</param>
         /// <returns>Um Status Code 204 (No Content)</returns>
-        
         [Authorize(Roles = "ADMINISTRADOR")]
         [HttpPut("{id}")]
         public IActionResult Put(int id, Usuario UsuarioAtualizado)
         {
-            // Cria um objeto em Estudios para armazenar  IdBuscado
+            // Cria um objeto em Usuarios para armazenar  IdBuscado
             Usuario UsuarioBuscado = _usuarioRepository.BuscarUsuariosPorId(id);
 
-            // Se o Id do estúdio buscado for nulo :
+            // Se o Id do usuário buscado for nulo :
             if (UsuarioBuscado == null)
             {
                 return NotFound
@@ -126,11 +122,10 @@ namespace Senai.Senatur.WebApi.Controllers
         }
 
         /// <summary>
-        /// Deleta um estúdio
+        /// Deleta um usuário
         /// </summary>
-        /// <param name="id">Id do estúdio que será deletado</param>
+        /// <param name="id">Id do usuário que será deletado</param>
         /// <returns>Um status code 200</returns>
-        
         [Authorize(Roles = "ADMINISTRADOR")]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)

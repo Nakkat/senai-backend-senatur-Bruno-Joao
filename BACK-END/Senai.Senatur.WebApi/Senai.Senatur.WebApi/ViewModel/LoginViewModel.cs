@@ -20,7 +20,5 @@ namespace Senai.Senatur.WebApi.ViewModel
         [DataType(DataType.Password)]
         [StringLength(20,MinimumLength =5, ErrorMessage ="Sua senha deve conter no mínimo 5 e no máximo 20 caracteres")]
         public string Senha { get; set; }
-
-
     }
 }

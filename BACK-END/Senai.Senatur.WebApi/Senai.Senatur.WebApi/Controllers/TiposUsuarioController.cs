@@ -30,10 +30,9 @@ namespace Senai.Senatur.WebApi.Controllers
         }
 
         /// <summary>
-        /// Lista todos os estúdios
+        /// Lista todos os tipos de usuário
         /// </summary>
-        /// <returns>Uma lista de estúdios e um status code 200 - Ok</returns>
-
+        /// <returns>Uma lista dos tipos de usuário e um status code 200 - Ok</returns>
         [Authorize(Roles = "ADMINISTRADOR")]
         [HttpGet]
         public IActionResult Get()
@@ -43,11 +42,10 @@ namespace Senai.Senatur.WebApi.Controllers
         }
 
         /// <summary>
-        /// Busca um estúdio através do ID
+        /// Busca um tipo de usuário através do ID
         /// </summary>
-        /// <param name="id">ID do estúdio que será buscado</param>
-        /// <returns>Um estúdio buscado e um status code 200 - Ok</returns>
-
+        /// <param name="id">ID do tipo de usuário que será buscado</param>
+        /// <returns>Um tipo de usuário buscado e um status code 200 - Ok</returns>
         [Authorize(Roles = "ADMINISTRADOR")]
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
